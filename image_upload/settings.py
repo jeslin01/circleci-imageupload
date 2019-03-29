@@ -25,7 +25,9 @@ SECRET_KEY = 'fl1qpsp=4_&ue_43s87io-vgk15w225jxpc#9j+&ht!fra+!fk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'ci-imageupload.herokuapp.com'
+]
 
 
 # Application definition
