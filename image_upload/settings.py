@@ -26,7 +26,8 @@ SECRET_KEY = 'fl1qpsp=4_&ue_43s87io-vgk15w225jxpc#9j+&ht!fra+!fk'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'ci-imageupload.herokuapp.com'
+    'ci-imageupload.herokuapp.com',
+    '127.0.0.1'
 ]
 
 
@@ -125,8 +126,9 @@ STATICFILES_DIRS = (
     os.path.join(os.path.abspath(os.path.dirname(__file__)), "static",),
     os.path.join(BASE_DIR, 'static'),
 )
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT_DEVELOPMENT = os.path.join(PROJECT_DIR, '../static')
+
+# Media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-
-STATIC_ROOT_DEVELOPMENT = os.path.join(PROJECT_DIR, '../static')
